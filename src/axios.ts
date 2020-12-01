@@ -12,8 +12,25 @@ function axios(config: AxiosRequestConfig): AxiosPromise {
 }
 
 function processConfig(config: AxiosRequestConfig): void {
+  /**
+   * 设置URL
+   * 主要针对params参数
+   * 如GET请求参数拼接
+   */
   config.url = transfromURL(config)
+
+  /**
+   * 设置请求头
+   * 当data为Object时应设置默认的Content-Type
+   * 否则后端有可能接收不到data参数
+   */
   config.headers = transformHeaders(config)
+
+  /**
+   * 设置data
+   * 当data为普通object时，将其转为字符串
+   *
+   */
   config.data = transformRequestData(config)
 }
 
