@@ -14,6 +14,13 @@ export type Method =
   | 'patch'
   | 'PATCH'
 
+export interface MethodWithObject {
+  method: Method
+  url: string
+  config?: AxiosRequestConfig
+  data?: any
+}
+
 export interface AxiosRequestConfig {
   url?: string // 请求地址
   method?: Method // 请求方法
