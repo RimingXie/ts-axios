@@ -15,20 +15,22 @@ npm install
 **Start coding!** `package.json` and entry files are already set up for you, so don't worry about linking to your main file, typings, etc. Just keep those files with the same name.
 
 ### 接口测试
-
- - npm run dev
- - 浏览器打开 localhost:8080
+```bash
+ npm run dev
+```
+浏览器打开 localhost:8080
 
 ### 代码检查
-
-  - npm run lint
+```bash
+  npm run lint
+```
 
 ### 打包构建
-
-  - npm run build
-
+```bash
+  npm run build
+```
 ### 单元测试
-
-  - npm run test 
-
+```bash
+  npm run test 
+```
 更多脚本命令请查看根目录package.json文件
